@@ -9,6 +9,7 @@ import org.json.JSONObject;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.telephony.TelephonyManager;
 import android.text.Editable;
 import android.text.Html;
@@ -302,7 +303,13 @@ public class MyRegisterPage extends RegisterPage {
 									SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE,
 									SMSSDK.RESULT_COMPLETE, phoneMap);
 						}
+						/*这里你可以写一个你想跳转的activity,例如TESTActivity
+						 *Intent testIntent = new Intent(mContext, TestActivity.class);
+					     *startActivity(testIntent);
+						 *我这里只是显示一个Toast
+						 * */
 						Toast.makeText(activity, "I don't return !", Toast.LENGTH_SHORT).show();
+//						finish();
 					}
 				}
 			}
